@@ -2,7 +2,7 @@ import React from 'react'
 
 import Container from 'components/Container'
 import Heading from 'components/Heading'
-import { SectionScheduleProps } from './types'
+import { SectionScheduleProps } from '../../types/api'
 
 import * as S from './styles'
 
