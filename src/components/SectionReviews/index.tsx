@@ -7,7 +7,6 @@ import ReviewCard from 'components/ReviewCard'
 
 import * as S from './styles'
 import { SectionReviewsProps } from 'types/api'
-import { getImageUrl } from 'utils/getImageUrl'
 
 const settings = {
   dots: true,
@@ -31,25 +30,24 @@ const settings = {
   ]
 }
 
-const SectionReviews = ({ title, reviews }: SectionReviewsProps) => {
-  return (
-    <Container>
-      <Heading reverseColor>{title}</Heading>
+const SectionReviews = ({ title, reviews }: SectionReviewsProps) => (
+  <Container>
+    <Heading reverseColor>{title}</Heading>
 
-      <S.Content>
-        <Slider {...settings}>
-          {/* {reviews.map(({ name, photo, text }, index) => (
-            <ReviewCard
-              key={index}
-              name={name}
-              image={photo.url}
-              description={text}
-              id={index}
-            />
-          ))} */}
-        </Slider>
-      </S.Content>
-    </Container>
-  )
-}
+    <S.Content>
+      <Slider {...settings}>
+        {reviews.map(({ name, photo, text }, index) => (
+          <ReviewCard
+            key={index}
+            name={name}
+            image={photo.url}
+            description={text}
+            id={index}
+          />
+        ))}
+      </Slider>
+    </S.Content>
+  </Container>
+)
+
 export default SectionReviews
