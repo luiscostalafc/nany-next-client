@@ -1,6 +1,7 @@
 import React from 'react'
 import { GetStaticProps } from 'next'
 
+import Header from 'components/Header'
 import SectionHero from 'components/SectionHero'
 import SectionAboutProject from 'components/SectionAboutProject'
 import SectionTech from 'components/SectionTech'
@@ -8,7 +9,7 @@ import SectionConcepts from 'components/SectionConcepts'
 import SectionModules from 'components/SectionModules'
 import SectionAgenda from 'components/SectionAgenda'
 import PricingBox from 'components/PricingBox'
-import SectionAboutUs from 'components/SectionAboutUs'
+//import SectionAboutUs from 'components/SectionAboutUs'
 import SectionReviews from 'components/SectionReviews'
 import SectionFaq from 'components/SectionFaq'
 import Footer from 'components/Footer'
@@ -27,11 +28,11 @@ const Index = ({
   sectionsModules,
   sectionSchedule,
   pricingBox,
-  sectionAboutUs,
   sectionReviews,
   sectionFaq
 }: LandingPageProps) => (
   <>
+    <Header />
     <SectionHero logo={logo} header={header} />
     <SectionAboutProject {...sectionAboutProject} />
     <SectionTech {...sectionTech} />
@@ -39,7 +40,7 @@ const Index = ({
     <SectionModules {...sectionsModules} />
     <SectionAgenda {...sectionSchedule} />
     <PricingBox {...pricingBox} />
-    <SectionAboutUs {...sectionAboutUs} />
+    {/* <SectionAboutUs {...sectionAboutUs} /> */}
     <SectionReviews {...sectionReviews} />
     <SectionFaq {...sectionFaq} />
     <Footer />

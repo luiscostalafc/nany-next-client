@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Logo from 'components/Logo'
+//import Logo from 'components/Logo'
 import Button from 'components/Button'
 import * as S from './styles'
 
@@ -17,10 +17,10 @@ type Props = {
   header: HeaderProps
 }
 
-const SectionHero = ({ logo, header }: Props) => (
+const SectionHero = ({ header }: Props) => (
   <S.Wrapper>
     <Container>
-      <Logo {...logo} />
+      {/* <Logo {...logo} /> */}
 
       <S.Content>
         <S.TextBlock>
