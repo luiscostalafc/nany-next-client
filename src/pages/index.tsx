@@ -2,13 +2,13 @@ import React from 'react'
 import { GetStaticProps } from 'next'
 
 import Header from 'components/Header'
-import SectionHero from 'components/SectionHero'
-import SectionAboutProject from 'components/SectionAboutProject'
+//import SectionHero from 'components/SectionHero'
+//import SectionAboutProject from 'components/SectionAboutProject'
 import SectionTech from 'components/SectionTech'
-import SectionConcepts from 'components/SectionConcepts'
+//import SectionConcepts from 'components/SectionConcepts'
 import SectionModules from 'components/SectionModules'
 import SectionAgenda from 'components/SectionAgenda'
-import PricingBox from 'components/PricingBox'
+//import PricingBox from 'components/PricingBox'
 //import SectionAboutUs from 'components/SectionAboutUs'
 import SectionReviews from 'components/SectionReviews'
 import SectionFaq from 'components/SectionFaq'
@@ -20,26 +20,21 @@ import GET_LANDING_PAGE from 'graphql/queries/getLandingPage'
 import { LandingPageProps } from 'types/api'
 
 const Index = ({
-  logo,
-  header,
-  sectionAboutProject,
   sectionTech,
-  sectionConcepts,
   sectionsModules,
   sectionSchedule,
-  pricingBox,
   sectionReviews,
   sectionFaq
 }: LandingPageProps) => (
   <>
     <Header />
-    <SectionHero logo={logo} header={header} />
-    <SectionAboutProject {...sectionAboutProject} />
+    {/* <SectionHero logo={logo} header={header} />
+    <SectionAboutProject {...sectionAboutProject} /> */}
     <SectionTech {...sectionTech} />
-    <SectionConcepts {...sectionConcepts} />
+    {/* <SectionConcepts {...sectionConcepts} /> */}
     <SectionModules {...sectionsModules} />
     <SectionAgenda {...sectionSchedule} />
-    <PricingBox {...pricingBox} />
+    {/* <PricingBox {...pricingBox} /> */}
     {/* <SectionAboutUs {...sectionAboutUs} /> */}
     <SectionReviews {...sectionReviews} />
     <SectionFaq {...sectionFaq} />
