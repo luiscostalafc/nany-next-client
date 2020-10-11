@@ -16,6 +16,10 @@ export default function Header() {
     }
   }, [])
 
+  const toggleNav = () => {
+    setNavVisibility(!isNavVisible)
+  }
+
   const handleMediaQueryChange = (mediaQuery) => {
     if (mediaQuery.matches) {
       setIsSmallScreen(true)
@@ -24,12 +28,8 @@ export default function Header() {
     }
   }
 
-  const toggleNav = () => {
-    setNavVisibility(!isNavVisible)
-  }
-
   return (
-    <S.HeaderContainer className="Header">
+    <S.HeaderContainer>
       <S.HeaderLogo
         src={require('../../../public/img/nany.png')}
         className="Logo"
@@ -40,15 +40,16 @@ export default function Header() {
         timeout={350}
         unmountOnExit
       >
-        <S.HeaderNav className="Nav">
-          <a href="/">Home</a>
-          <a href="/">Articles</a>
-          <a href="/">About</a>
-          <button>Logout</button>
+        <S.HeaderNav>
+          <a href="/">Piscina de Bolinhas</a>
+          <a href="/">Cama Elástica</a>
+          <a href="/">Inflável</a>
+          <a href="/">Mesas de Plástico</a>
+          <a href="/">Jogos</a>
         </S.HeaderNav>
       </CSSTransition>
       <S.Burger onClick={toggleNav}>
-        <S.HeaderLogo
+        <S.HeaderLogoBurger
           src={require('../../../public/img/menu-burger.png')}
           className="Logo"
           alt="logo"
