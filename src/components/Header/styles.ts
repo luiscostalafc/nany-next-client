@@ -8,13 +8,13 @@ export const HeaderContainer = styled.div`
 
   display: grid;
   grid-template-areas: 'logo nav burger';
-  background-color: #282c34;
+  background-color: #5ec191;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 `
 
 export const HeaderLogo = styled.img`
   grid-area: logo;
-  height: 200px;
+  height: 140px;
   padding: 5px;
 
   @media (max-width: 700px) {
@@ -46,6 +46,7 @@ export const HeaderNav = styled.nav`
     text-decoration: none;
     &:hover {
       transform: scale(1.1);
+      color: #f16a3e;
     }
   }
 
