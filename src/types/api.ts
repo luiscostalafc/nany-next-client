@@ -108,9 +108,9 @@ export type SectionFaqProps = {
   questions: Question[]
 }
 
-export type SectionSliderProps = {
-  title?: string
-  reviews?: Review[]
+export interface SectionSliderProps {
+  title: string
+  reviews: Review[]
 }
 
 export type LandingPageProps = {

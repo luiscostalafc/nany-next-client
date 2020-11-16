@@ -1,48 +1,62 @@
 import React from 'react'
-import Slider from 'react-slick'
-import SimpleImageSlider from 'react-simple-image-slider'
+import { ArrowBackIos as ArrowLeft } from '@styled-icons/material-outlined/ArrowBackIos'
+import { ArrowForwardIos as ArrowRight } from '@styled-icons/material-outlined/ArrowForwardIos'
 
-import Container from 'components/Container'
-import Heading from 'components/Heading'
-import ReviewCard from 'components/ReviewCard'
+import Slider, { SliderSettings } from 'components/Slider'
+import GameCard from 'components/GameCard'
 
-import * as S from './styles'
 import { SectionSliderProps } from 'types/api'
 
-const settings = {
-  dots: true,
-  arrows: false,
-  slidesToShow: 2,
+import * as S from './styles'
+
+const settings: SliderSettings = {
+  arrows: true,
+  slidesToShow: 4,
   infinite: false,
-  speed: 500,
-  rows: 2,
-  slidesPerRow: 1,
-  slidesToScroll: 2,
+  lazyLoad: 'ondemand',
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 1375,
       settings: {
-        slidesToShow: 1,
-        rows: 2,
-        slidesPerRow: 1,
-        slidesToScroll: 1
+        arrows: false,
+        slidesToShow: 3.2
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        arrows: false,
+        slidesToShow: 2.2
+      }
+    },
+    {
+      breakpoint: 570,
+      settings: {
+        arrows: false,
+        slidesToShow: 1.2
+      }
+    },
+    {
+      breakpoint: 375,
+      settings: {
+        arrows: false,
+        slidesToShow: 1.1
       }
     }
-  ]
+  ],
+  nextArrow: <ArrowRight aria-label="next games" />,
+  prevArrow: <ArrowLeft aria-label="previous games" />
 }
 
-const SectionSlider = ({ title, reviews }: SectionSliderProps) => {
-  const images = reviews.map((review) => review.photo.url)
-
-  return (
-    <Container>
-      <Heading reverseColor>{title}</Heading>
-
-      <S.Content>
-        <SimpleImageSlider images={images} width={896} height={504} />
-      </S.Content>
-    </Container>
-  )
-}
+const SectionSlider = ({ title, reviews }: SectionSliderProps) => (
+  <S.Wrapper>
+    <Slider settings={settings}>
+      <div>{title}</div>
+      {reviews.map((review, index) => (
+        <GameCard key={index} {...review} />
+      ))}
+    </Slider>
+  </S.Wrapper>
+)
 
 export default SectionSlider

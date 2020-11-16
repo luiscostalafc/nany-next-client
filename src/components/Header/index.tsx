@@ -31,7 +31,7 @@ export default function Header() {
   return (
     <S.HeaderContainer>
       <S.HeaderLogo
-        src={require('../../../public/img/nany.png')}
+        src={require('../../../public/nany.svg')}
         className="Logo"
         alt="logo"
       />
@@ -50,7 +50,7 @@ export default function Header() {
       </CSSTransition>
       <S.Burger onClick={toggleNav}>
         <S.HeaderLogoBurger
-          src={require('../../../public/img/menu-burger.png')}
+          src={require('../../../public/hamburger.png')}
           className="Logo"
           alt="logo"
         />

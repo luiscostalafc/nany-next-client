@@ -52,19 +52,6 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
-  fragment sectionReviews on LandingPage {
-    sectionReviews {
-      title
-      reviews {
-        name
-        text
-        photo {
-          url
-        }
-      }
-    }
-  }
-
   query GET_LANDIG_PAGE {
     landingPage {
       ...sectionTech
@@ -72,7 +59,6 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...sectionSchedule
       ...sectionFaq
       ...sectionSlider
-      ...sectionReviews
     }
   }
 `

@@ -10,8 +10,8 @@ import SectionModules from 'components/SectionModules'
 import SectionAgenda from 'components/SectionAgenda'
 //import PricingBox from 'components/PricingBox'
 //import SectionAboutUs from 'components/SectionAboutUs'
-import SectionReviews from 'components/SectionReviews'
-import SectionSlider from 'components/SectionSlider'
+//import SectionReviews from 'components/SectionReviews'
+//import SectionSlider from 'components/SectionSlider'
 import SectionFaq from 'components/SectionFaq'
 import Footer from 'components/Footer'
 import JsonSchema from 'components/JsonSchema'
@@ -24,22 +24,14 @@ const Index = ({
   sectionTech,
   sectionsModules,
   sectionSchedule,
-  sectionReviews,
-  sectionFaq,
-  sectionSlider
+  sectionFaq
 }: LandingPageProps) => (
   <>
     <Header />
-    <SectionSlider {...sectionSlider} />
-    {/* <SectionHero logo={logo} header={header} />
-    <SectionAboutProject {...sectionAboutProject} /> */}
+    {/* <SectionSlider {...sectionSlider} /> */}
     <SectionTech {...sectionTech} />
-    {/* <SectionConcepts {...sectionConcepts} /> */}
     <SectionModules {...sectionsModules} />
     <SectionAgenda {...sectionSchedule} />
-    {/* <PricingBox {...pricingBox} /> */}
-    {/* <SectionAboutUs {...sectionAboutUs} /> */}
-    <SectionReviews {...sectionReviews} />
     <SectionFaq {...sectionFaq} />
     <Footer />
     <JsonSchema />
