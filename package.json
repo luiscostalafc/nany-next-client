@@ -55,7 +55,7 @@
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.6.1",
     "next-seo": "^4.5.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "path": "^0.12.7",
     "pg": "^8.5.1",
     "react": "^16.13.1",
